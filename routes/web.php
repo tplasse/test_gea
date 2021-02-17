@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('clients.index');
 });
+
+Route::resource('/clients', 'ClientController')->only(['index', 'show']);
+
+Route::get('/mecaniciens', 'MecanicienController@index')->name('mecaniciens.index');
+Route::get('/mecaniciens/{id}', 'MecanicienController@show')->name('mecaniciens.show');
