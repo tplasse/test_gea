@@ -6,6 +6,27 @@
 
 <h1>Liste Clients</h1>
 
+<div class="mb-5 p-2 border">
+    <form action="" method="get">
+        <div class="form-group">
+            <label for="villes">Filtrer par ville</label>
+            <select class="form-control" id="villes" name="ville">
+                <option value="0">
+                    Toutes
+                </option>
+                @foreach ($villes as $ville)
+                    <option value="{{$ville}}" {{request('ville') == $ville ? 'selected' : ''}}>
+                        {{$ville}}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">
+            Appliquer
+        </button>
+    </form>
+</div>
+
 <table class="table table-hover table-light border border-secondary">
     <thead>
         <tr>

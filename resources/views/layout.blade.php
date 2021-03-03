@@ -19,7 +19,7 @@
                 <a class="nav-link" href="{{route('clients.index')}}">Clients</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Voitures</a>
+                <a class="nav-link" href="{{route('voitures.index')}}">Voitures</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{route('mecaniciens.index')}}">Mécaniciens</a>

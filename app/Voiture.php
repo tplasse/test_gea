@@ -19,4 +19,8 @@ class Voiture extends Model
     public function client() {
         return $this->belongsTo(Client::class, 'client_id');
     }
+
+    public function mecaniciens() {
+        return $this->belongsToMany(Mecanicien::class, 'voiture_mecanicien');
+    }
 }

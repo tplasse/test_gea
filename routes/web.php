@@ -19,3 +19,5 @@ Route::resource('/clients', 'ClientController')->only(['index', 'show']);
 
 Route::get('/mecaniciens', 'MecanicienController@index')->name('mecaniciens.index');
 Route::get('/mecaniciens/{id}', 'MecanicienController@show')->name('mecaniciens.show');
+
+Route::resource('/voitures', 'VoitureController')->only(['index', 'show', 'update']);

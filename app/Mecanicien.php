@@ -12,4 +12,8 @@ class Mecanicien extends Model
         'nom',
         'prenom',
     ];
+
+    public function voitures() {
+        return $this->belongsToMany(Voiture::class, 'voiture_mecanicien');
+    }
 }
